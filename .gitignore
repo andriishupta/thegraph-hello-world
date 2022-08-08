@@ -4,8 +4,10 @@
 # IDE
 .idea
 
-# node
+# general
 node_modules
+artifacts
+cache
 
 # graph
 build
