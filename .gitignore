@@ -1,0 +1,18 @@
+# general
+.DS_Store
+
+# IDE
+.idea
+
+# node
+node_modules
+
+# graph
+build
+generated
+*.local.graphql
+
+# env
+.env
+.env.*
+!.env.example
