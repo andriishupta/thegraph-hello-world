@@ -1,26 +1,17 @@
-type ExampleEntity @entity {
+type Profile @entity {
   id: ID!
-  count: BigInt!
-  previousAdmin: Bytes! # address
-  newAdmin: Bytes! # address
-}
-type Approval @entity {
-  id: ID!
-  owner: Bytes! # address
-  approved: Bytes! # address
-  tokenId: BigInt! # uint256
+  handle: String
+  imageURI: String
+
+  # derived from connection
+  posts: [Post!] @derivedFrom(field: "profile")
 }
 
-type ApprovalForAll @entity {
+type Post @entity {
   id: ID!
-  owner: Bytes! # address
-  operator: Bytes! # address
-  approved: Boolean! # bool
-}
+  pubId: String # todo: update to have connection to Publications
+  contentURI: String
 
-type Transfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  tokenId: BigInt! # uint256
+  # one to many connection
+  profile: Profile!
 }

@@ -1,10 +1,7 @@
 {
   "matic": {
-    "LensHubProxy": {
-      "address": "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
-    },
     "LensHub": {
-      "address": "0x20f4D7DdeE23029048C53B42dc73A02De19F1c9E"
+      "address": "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
     }
   }
 }
