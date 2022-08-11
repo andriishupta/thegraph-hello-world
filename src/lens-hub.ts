@@ -39,7 +39,7 @@ export function handleProfileImageURISet(event: ProfileImageURISet): void {
 }
 
 export function handlePostCreated(event: PostCreated): void {
-  const postId = event.params.profileId.toString();
+  const postId = event.params.pubId.toString();
   log.info('Event [PostCreated] has been trigger for postId: {}', [postId]);
   const post = new Post(postId);
 
@@ -51,7 +51,6 @@ export function handlePostCreated(event: PostCreated): void {
   }
 
   post.profile = profile.id;
-  post.pubId = event.params.pubId.toString(); // todo: show be also changed like profile to link to publication
   post.contentURI = event.params.contentURI;
 
   post.save();

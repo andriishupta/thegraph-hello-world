@@ -9,7 +9,6 @@ type Profile @entity {
 
 type Post @entity {
   id: ID!
-  pubId: String # todo: update to have connection to Publications
   contentURI: String
 
   # one to many connection
